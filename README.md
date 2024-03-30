@@ -34,9 +34,23 @@ could provide many insights such as
     To perform NGS analysis, we need sequencing reads to input. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
     
 3. **Modules required to perform analysis.**
-    - SRA toolkit
-    - 
-    
+
+   3.1. creating a conda environment and loading it
+
+   ```
+   conda create --name NGS_analysis
+   conda activate NGS_analysis
+   ```
+
+   3.2. Installing required tools
+
+   ```
+   conda config --add channels bioconda
+   ```
+
+   ```
+   conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
+   ```    
 
 ---
 
@@ -64,18 +78,17 @@ SRS20809121
 
 ### 1.2. Two methods of downloading data
 
-You can choose any one of these two methods.
-
+**You can choose any one of these two methods.**
 #### 1.2.1. Directly using cloud - Fast
 
-```bash
+```
 wget s3://sra-pub-src-13/SRR28409626/IDR1900024110-01-01.R1.fastq.gz.1
 wget s3://sra-pub-src-13/SRR28409626/IDR1900024110-01-01.R2.fastq.gz.1
 ```
 
 #### 1.2.2. Using SRA toolkit
 
-```bash
+```
 fastq-dump --split-3 --gzip SRR28409626
 ```
 
@@ -93,7 +106,6 @@ fastq-dump --split-3 --gzip SRR28409626
 ``` 
 head <file1_1.fastq> # To view top 10 lines
 ```
-
 ``` 
 tail <file1_1.fastq> # To view bottom 10 lines
 ```
@@ -120,24 +132,19 @@ fastqc <file1_1.fastq> <file1_2.fastq> -q
 > - Overrepresented sequences
 > - Adapter content
 
-### 2.2. multiqc
-
-```
-multiqc .<input_dir> -o <out_dir>
-
-```
-
 ---
 
 ## 3. Trimming reads
+
+This step could be done by any of these three methods.
 
 > Is it necessary?
 Removal of low quality reads.
 Reads containing adaptor sequences.
 > 
 
-Using #Triimmomatic
-[Important resource](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf))
+3.1. Using #Triimmomatic
+> [Important resource](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf))
 
 ```
 java -jar /trimmomatic-0.39.jar\\
@@ -145,10 +152,9 @@ java -jar /trimmomatic-0.39.jar\\
  <input_file1_1> <input_file1_2>\\
  <output_file1_1> <output_file1_2>\\
  ILLUMINACLIP:adapter.fasta TRAILING:3 LEADING:3 MINLEN:36 SLIDINGWINDOW:4:15
-
 ```
 
-Using #Cutadapt
+3.2. Using #Cutadapt
 
 ### 3.2.1 To remove 3' adapter
 
@@ -156,21 +162,17 @@ Using #Cutadapt
 
 ```
 cutadapt -a <adapter_seq> <input.fastq.gz> -o <output.fastq.gz>
-
 ```
 
 **Paired-end reads**
-
 ```
 cutadapt -a <adapter_seq_forw> -A <adapter_seq_rev> <file1_1.fastq.gz> <file1_2.fastq.gz> <file1_1.trimmed.fastq.gz> <file1_2.trimmed.fastq.gz>
-
 ```
 
-Using #Trim_Galore
+3.3. Using #Trim_Galore
 
 ```
 trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz>
-
 ```
 
 ---
@@ -181,45 +183,42 @@ trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz>
 
 ### 4.2. Indexing reference genome: one-time step
 
-Using #samtools
+This is a one-time step and can be performed using any of these methods
+
+#### 4.2.1. Using #samtools
 
 ```
 samtools faidx <ref_genome>
-
 ```
 
-Using #bwa : Works better with short (~100bp) reads.
+#### 4.2.2. Using #bwa : Works better with short (~100bp) reads.
 
 ```
 bwa index <ref_genome>
-
 ```
 
-This command generates
-.amb
-.ann
-.bwt: Binary file
-.pac: Binary file
-.sa: Binary file
+> This command generates
+> .amb
+> .ann
+> .bwt: Binary file
+> .pac: Binary file
+> .sa: Binary file
 
-Using #bowtie2
+
+#### 4.2.3. Using #bowtie2
 
 ```
 bowtie2-build <ref_genome> <prefix>
-
 ```
 
-This commands generates 6 files
-
-```
-<prefix>.1.bt2
-<prefix>.2.bt2
-<prefix>.3.bt2
-<prefix>.4.bt2
-<prefix>.rev.1.bt2
-<prefix>.rev.2.bt2
-
-```
+> This commands generates 6 files
+> 
+> <prefix>.1.bt2
+> <prefix>.2.bt2
+> <prefix>.3.bt2
+> <prefix>.4.bt2
+> <prefix>.rev.1.bt2
+> <prefix>.rev.2.bt2
 
 ### 4.3. Performing alignment generating SAM file
 
