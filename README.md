@@ -77,17 +77,7 @@ Run ID: SRR28409626
 Biosample ID: SAMN40566331
 SRS20809121
 
-### 1.2. Two methods of downloading data
-
-**You can choose any one of these two methods.**
-#### 1.2.1. Directly using cloud - Fast
-
-```
-mkdir fastq_reads && fastq_reads
-wget https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28409626/SRR28409626
-```
-
-#### 1.2.2. Using SRA toolkit
+#### 1.2.1. Download fastq reads using SRA toolkit
 
 ```
 mkdir fastq_reads && fastq_reads
