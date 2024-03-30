@@ -55,20 +55,18 @@ For this tutorial, we will analyze the result of genome sequencing of a ***Mycob
 
 **WGS of Mycobacterium tuberculosis: isolate (SRR23086706)**
 
-## Two methods of downloading data
+### 1.2. Two methods of downloading data
 
 You can choose any one of these two methods.
 
-### Directly using cloud - Fast
+#### 1.2.1. Directly using cloud - Fast
 
 ```bash
 wget s3://sra-pub-src-9/SRR23086706/IT318_ILL-Q4-RP1-PH0_150bp_R1.fastq.gz.1
 wget s3://sra-pub-src-18/SRR23086706/IT318_ILL-Q4-RP1-PH0_150bp_R2.fastq.gz.1
 ```
 
-### 1.1. Using SRA toolkit
-
-Using SRA toolkit to extract data
+#### 1.2.2. Using SRA toolkit
 
 ```bash
 fastq-dump --split-3 --gzip SRR23086706
@@ -82,48 +80,26 @@ fastq-dump --split-3 --gzip SRR23086706
 
 ---
 
-## 2. Dealing with .fastq files
+## 2. Information on .fastq files
 
-### 2.1 View
-
-**If fastq.gz**
-
-```bash
-gunzip <file1_1.fastq.gz>
-
+### 2.1. Viewing .fastq files content
+``` 
+head <file1_1.fastq> # To view top 10 lines
 ```
 
-```
-head/tail/cat <file1_1.fastq>
-
-```
-
-or simply
-
-```
-zcat/less <file1_1.fastq.gz>
-
+``` 
+tail <file1_1.fastq> # To view bottom 10 lines
 ```
 
 ### 2.2 Determining the number of reads
-
-```
-zcat read.fastq.gz | echo $((`wc -l`/4))
-
-```
-
-or
-
 ```
 zcat read.fastq.gz | grep @SRR | wc -l
-
 ```
 
 ### 2.3. fastqc
 
 ```
 fastqc <file1_1.fastq> <file1_2.fastq> -q
-
 ```
 
 > Reading fastqc report
