@@ -35,24 +35,24 @@ could provide many insights such as
     
 ### 0.3. **Modules required to perform analysis.**
 
-   0.3.1. creating a conda environment and activating it.
+       0.3.1. creating a conda environment and activating it.
     
-   ```
-   conda create --name NGS_analysis
-   conda activate NGS_analysis
-   ```
-
-   0.3.2. Add channel
-
-   ```
-   conda config --add channels bioconda
-   conda config --add channels conda-forge
-   ```
-
-   0.3.3. Installing required tools
-   ```
-   conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
-   ```    
+       ```
+       conda create --name NGS_analysis
+       conda activate NGS_analysis
+       ```
+    
+       0.3.2. Add channel
+    
+       ```
+       conda config --add channels bioconda
+       conda config --add channels conda-forge
+       ```
+    
+       0.3.3. Installing required tools
+       ```
+       conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
+       ```    
 
 ---
 
