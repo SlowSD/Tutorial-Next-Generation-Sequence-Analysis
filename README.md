@@ -20,7 +20,7 @@ could provide many insights such as
 
 ## 0. Prerequisite for this tutorial
 
-1. **Linux architecture and knowledge of bash commands.**
+### 0.1. **Linux architecture and knowledge of bash commands.**
     
     <aside>
     💡 If don’t have any prior experience with bash commands, I would suggest you to check out this article.
@@ -29,38 +29,46 @@ could provide many insights such as
     
     </aside>
     
-2. **Sequencing data to analyze.**
+### 0.2. **Sequencing data to analyze.**
     
     To perform NGS analysis, we need sequencing reads to input. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
     
-3. **Modules required to perform analysis.**
+### 0.3. **Modules required to perform analysis.**
 
-   3.1. creating a conda environment and loading it
-
+   0.3.1. creating a conda environment and activating it.
+    
    ```
    conda create --name NGS_analysis
    conda activate NGS_analysis
    ```
 
-   3.2. Installing required tools
+   0.3.2. Add channel
 
    ```
    conda config --add channels bioconda
+   conda config --add channels conda-forge
    ```
 
+   0.3.3. Installing required tools
    ```
    conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
    ```    
 
 ---
 
-## 1. Downloading short reads from SRA
+## 1. Downloading sequencing data
 
 The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file. Due to this reason, for instructional purposes, it is ideal to use a smaller genome.
 
-### 1.1. Information of data we will be using in this tutorial.
+### 1.1. Creating main directory to save the analysis progress
 
-In this tutorial, we will analyze the result of whole genome sequences of Mycobacterium tuberculosis isolates collected in New York State.
+```
+mkdir ngs_analysis && cd ngs_analysis
+```
+
+### 1.2. Information of data we will be using in this tutorial.
+
+In this tutorial, we will analyze the result of whole genome sequences of Mycobacterium tuberculosis isolates collected in the New York State.
 
 Study ID: SRP338930
 Bioproject ID: PRJNA766641
@@ -69,31 +77,23 @@ Run ID: SRR28409626
 Biosample ID: SAMN40566331
 SRS20809121
 
-<aside>
-💡 **SRR23086706**
-
-</aside>
-
-**WGS of Mycobacterium tuberculosis: isolate (SRR23086706)**
-
 ### 1.2. Two methods of downloading data
 
 **You can choose any one of these two methods.**
 #### 1.2.1. Directly using cloud - Fast
 
 ```
-wget s3://sra-pub-src-13/SRR28409626/IDR1900024110-01-01.R1.fastq.gz.1
-wget s3://sra-pub-src-13/SRR28409626/IDR1900024110-01-01.R2.fastq.gz.1
+mkdir fastq_reads && fastq_reads
+wget https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR28409626/SRR28409626
 ```
 
 #### 1.2.2. Using SRA toolkit
 
 ```
+mkdir fastq_reads && fastq_reads
 fastq-dump --split-3 --gzip SRR28409626
 ```
-
 > --split-3
-> 
 > - single-end reads will end up in a single file.
 > - paired-end reads will produce two files
 > - unpaired reads (if any) will be placed into a third file
@@ -101,6 +101,12 @@ fastq-dump --split-3 --gzip SRR28409626
 ---
 
 ## 2. Information on .fastq files
+
+Once the sequencing data has been downloaded, with the listing command the files can be seen in the current directory.
+
+```
+ls
+```
 
 ### 2.1. Viewing .fastq files content
 ``` 
