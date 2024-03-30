@@ -48,6 +48,13 @@ The whole genome sequencing process is time taking and involves reading each bas
 
 In this tutorial, we will analyze the result of whole genome sequences of Mycobacterium tuberculosis isolates collected in New York State.
 
+Study ID: SRP338930
+Bioproject ID: PRJNA766641
+Experiment ID: SRX24013992
+Run ID: SRR28409626
+Biosample ID: SAMN40566331
+SRS20809121
+
 <aside>
 💡 **SRR23086706**
 
