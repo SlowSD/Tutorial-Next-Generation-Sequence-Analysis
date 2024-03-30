@@ -62,8 +62,11 @@ You can choose any one of these two methods.
 #### 1.2.1. Directly using cloud - Fast
 
 ```bash
-wget s3://sra-pub-src-9/SRR23086706/IT318_ILL-Q4-RP1-PH0_150bp_R1.fastq.gz.1
-wget s3://sra-pub-src-18/SRR23086706/IT318_ILL-Q4-RP1-PH0_150bp_R2.fastq.gz.1
+https://zenodo.org/record/582600/files/mutant_R1.fastq
+https://zenodo.org/record/582600/files/mutant_R2.fastq
+https://zenodo.org/record/582600/files/wildtype.fna
+https://zenodo.org/record/582600/files/wildtype.gbk
+https://zenodo.org/record/582600/files/wildtype.gff
 ```
 
 #### 1.2.2. Using SRA toolkit
