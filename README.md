@@ -1,4 +1,4 @@
-# Tutorial-Next-Generation-Sequence-Analysis
+# Tutorial: Next Generation Sequence Analysis - Stepwise
 
 This repository attempts to provide a easy tutorial on the Next Generation Sequence (NGS) analysis.
 What happens in a NGS analysis?
