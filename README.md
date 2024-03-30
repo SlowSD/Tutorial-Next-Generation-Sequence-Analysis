@@ -62,17 +62,14 @@ You can choose any one of these two methods.
 #### 1.2.1. Directly using cloud - Fast
 
 ```bash
-https://zenodo.org/record/582600/files/mutant_R1.fastq
-https://zenodo.org/record/582600/files/mutant_R2.fastq
-https://zenodo.org/record/582600/files/wildtype.fna
-https://zenodo.org/record/582600/files/wildtype.gbk
-https://zenodo.org/record/582600/files/wildtype.gff
+wget s3://sra-pub-src-13/SRR28409626/IDR1900024110-01-01.R1.fastq.gz.1
+wget s3://sra-pub-src-13/SRR28409626/IDR1900024110-01-01.R2.fastq.gz.1
 ```
 
 #### 1.2.2. Using SRA toolkit
 
 ```bash
-fastq-dump --split-3 --gzip SRR23086706
+fastq-dump --split-3 --gzip SRR28409626
 ```
 
 > --split-3
