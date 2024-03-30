@@ -100,16 +100,18 @@ ls
 
 ### 2.1. Viewing .fastq files content
 ``` 
-head <file1_1.fastq> # To view top 10 lines
+zcat SRR28409626_1.fastq.gz | head -n 8 # To view top 8 lines or top 2 reads
 ```
 ``` 
-tail <file1_1.fastq> # To view bottom 10 lines
+zcat SRR28409626_2.fastq.gz | head -n 8 # To view top 8 lines or top 2 reads
 ```
+You should see that both files have same reads ID, i.e `SRR28409626_1` and `SRR28409626_2`
 
 ### 2.2 Determining the number of reads
 ```
-zcat read.fastq.gz | grep @SRR | wc -l
+zcat SRR28409626_1.fastq.gz | grep @SRR | wc -l
 ```
+Check yourself whether the other file have the same no. of reads.
 
 ### 2.3. fastqc
 
