@@ -42,11 +42,11 @@ could provide many insights such as
 
 ## 1. Downloading short reads from SRA
 
-As the genome sequencing method comprises of reading each base of the genome sequence, the larger the species genome, the bigger would be the sequenced data file. Due to this reason, it is ideal to use a bacterial genome for instructional purposes.
+The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file. Due to this reason, for instructional purposes, it is ideal to use a smaller genome.
 
 ### 1.1. Information of data we will be using in this tutorial.
 
-For this tutorial, we will analyze the result of genome sequencing of a ***Mycobacterium tuberculosis*** strain. The strain was sequenced using Miniseq platform (Illumina Inc., San Diego, CA, USA) with paired-end Nextera XT library preparation 
+In this tutorial, we will analyze the result of whole genome sequences of Mycobacterium tuberculosis isolates collected in New York State.
 
 <aside>
 💡 **SRR23086706**
