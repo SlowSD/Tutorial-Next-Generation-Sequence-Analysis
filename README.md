@@ -115,8 +115,11 @@ Check yourself whether the other file have the same no. of reads.
 
 ### 2.3. fastqc
 
+
+
 ```
-fastqc <file1_1.fastq> <file1_2.fastq> -q
+mkdir fastqc_results
+fastqc SRR28409626_1.fastq.gz SRR28409626_2.fastq.gz -o /fastqc_results
 ```
 
 > Reading fastqc report
