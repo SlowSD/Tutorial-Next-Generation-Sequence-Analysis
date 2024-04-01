@@ -114,24 +114,20 @@ zcat SRR28409626_1.fastq.gz | grep @SRR | wc -l
 Check yourself whether the other file have the same no. of reads.
 
 ### 2.3. fastqc
-
-
-
 ```
 mkdir fastqc_results
 fastqc SRR28409626_1.fastq.gz SRR28409626_2.fastq.gz -o /fastqc_results
 ```
 
-> Reading fastqc report
-> 
-> - Per base sequence quality:
-> - Per base sequence content
-> - Per base GC content
-> - Per base N content
-> - Sequence Length distribution
-> - Sequence Duplication levels
-> - Overrepresented sequences
-> - Adapter content
+> Reading fastqc report:
+    > - Per base sequence quality:
+    > - Per base sequence content
+    > - Per base GC content
+    > - Per base N content
+    > - Sequence Length distribution
+    > - Sequence Duplication levels
+    > - Overrepresented sequences
+    > - Adapter content
 
 ---
 
@@ -181,6 +177,27 @@ trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz>
 ## 4. Alignment of reads with the reference genome
 
 ### 4.1. Downloading reference genome
+
+The information on *Mycobacterium tuberculosis* reference genome is [here](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000195955.2/). The reference genome can be downloaded by multiple ways:
+
+![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/9dc3b1da-8a9a-4856-9fc4-63ec7ea34c7f)
+
+
+
+* Simply as zip folder
+* Using datasets command\
+    * Downloading dataset tool
+      ```
+      conda install -c conda-forge ncbi-datasets-cli #Installing conda package
+      Download datasets: curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets'
+      Download dataformat: curl -o dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/dataformat'
+      Make them executable: chmod +x datasets dataformat
+      ```
+    * 
+
+```
+
+```
 
 ### 4.2. Indexing reference genome: one-time step
 
