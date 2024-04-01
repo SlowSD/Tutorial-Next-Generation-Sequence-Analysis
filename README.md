@@ -178,9 +178,49 @@ trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz>
 
 ### 4.1. Downloading reference genome
 
+There are a couple of easy and difficult methods of downloading reference genomes.
+
+<details>
+    <summary><b>Method1: With no use of command</b></summary>
+
+> 1. Go to NCBI homepage
+> 2. Select assembly from the drop-down menu
+> 3. Search for `Mycobacterium tuberculosis`
+> 4. Click on `ASM19595v2` assembly
+> 5. Click on `Download assembly`
+> 6. Select `Refseq` and `Genomic Fasta (.fna)`
+> 
+> ![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/f7eb9ecc-bbd5-42f1-9501-8b79e89d0191)
+</details>
+
+
+<details>
+    <summary><b>Method 2: Best practice</b></summary>
+
+> 1. Repeat the 1-4 steps of Method 1.
+> 2. Click on '**FTP directory for RefSeq assembly**'
+> 
+> ![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/4982efb3-9fa0-46a9-a923-348c17fbc958)
+> 
+> 3. Right click on `GCF_000195955.2_ASM19595v2_genomic.fna.gz` and copy link.
+> 4. Download the refernece sequence data `wget` command.
+> 
+> ```
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
+> ```
+>
+</details>
+
+    ```
+    wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
+    ```
 The information on *Mycobacterium tuberculosis* reference genome is [here](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000195955.2/). The reference genome can be downloaded by multiple ways:
 
 ![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/9dc3b1da-8a9a-4856-9fc4-63ec7ea34c7f)
+
+```
+wget https://zenodo.org/record/3960260/files/Mycobacterium_tuberculosis_ancestral_reference.gbk
+```
 
 
 
