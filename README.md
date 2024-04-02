@@ -285,9 +285,9 @@ This is a one-time step and can be performed using any of these tools.
     <summary><h4>Using samtools</h4></summary>
 <aside>
     
-    ```
-    samtools faidx <ref_genome>
-    ```
+```
+samtools faidx <ref_genome>
+```
     
 </aside>    
 </details>
@@ -296,9 +296,9 @@ This is a one-time step and can be performed using any of these tools.
     <summary><h4>Using bwa</h4></summary>
 <aside>
     
-    ```
-    bwa index <ref_genome>
-    ```
+```
+bwa index <ref_genome>
+```
     
 > This command generates:
 >
@@ -318,11 +318,12 @@ This is a one-time step and can be performed using any of these tools.
 <details>
     <summary><h4>Using bowtie2</h4></summary>
 <aside>
-    ```
-    bowtie2-build <ref_genome> <prefix>
-    ```
+    
+```
+bowtie2-build <ref_genome> <prefix>
+```
 
-> This commands generates 6 files
+> This command generates 6 files
 > 
 > <prefix>.1.bt2
 > 
