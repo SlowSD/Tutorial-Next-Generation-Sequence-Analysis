@@ -30,19 +30,19 @@ To perform NGS analysis, we need sequencing reads as inputs. The largest public 
     
 ### 0.3. **Modules required to perform analysis.**
 
-> #### 0.3.1. creating a conda environment and activating it.
+#### 0.3.1. creating a conda environment and activating it.
 ```
 conda create --name NGS_analysis
 conda activate NGS_analysis
 ```
     
-> #### 0.3.2. Add channel
+#### 0.3.2. Add channel
 ```
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-> #### 0.3.3. Installing required tools
+#### 0.3.3. Installing required tools
 ```
  conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
  ```
@@ -75,13 +75,12 @@ SRS20809121
 mkdir fastq_reads && fastq_reads
 fastq-dump --split-3 --gzip SRR28409626
 ```
-> --split-3
+> **--split-3**
 > - single-end reads will end up in a single file.
 > - paired-end reads will produce two files
 > - unpaired reads (if any) will be placed into a third file
 
 ---
-
 ## 2. Information on .fastq files
 
 Once the sequencing data has been downloaded, with the listing command the files can be seen in the current directory.
@@ -91,7 +90,7 @@ ls
 ```
 
 ### 2.1. Viewing .fastq files content
-``` 
+```
 zcat SRR28409626_1.fastq.gz | head -n 8 # To view top 8 lines or top 2 reads
 ```
 ``` 
@@ -122,7 +121,6 @@ fastqc SRR28409626_1.fastq.gz SRR28409626_2.fastq.gz -o /fastqc_results
     > - Adapter content
 
 ---
-
 ## 3. Trimming reads
 
 This step could be done by any of these three methods.
