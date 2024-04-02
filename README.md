@@ -21,8 +21,7 @@ could provide many insights such as
 
 ### 0.1. **Linux architecture and knowledge of bash commands.**
     
->💡 If don’t have any prior experience with bash commands, I would suggest you to check out this article.
->        [Basic Linux commands](https://www.notion.so/Basic-Linux-commands-680d073407834ad981dab47f9411eb08?pvs=21)
+>💡 If don’t have any prior experience with bash commands, I would suggest you to check out this article on [Basic Linux commands](https://www.notion.so/Basic-Linux-commands-680d073407834ad981dab47f9411eb08?pvs=21)
     
 ### 0.2. **Sequencing data to analyze.**
     
@@ -30,7 +29,14 @@ could provide many insights such as
     
 ### 0.3. **Modules required to perform analysis.**
 
-#### 0.3.1. creating a conda environment for this whole NGS analysis session and activating it.
+#### 0.3.1. Creating a conda environment for this whole NGS analysis session and activating it.
+
+#### 0.3.. Creating main directory to save the analysis progress
+
+```
+mkdir ngs_analysis && cd ngs_analysis
+```
+
 ```
 conda create --name NGS_analysis
 conda activate NGS_analysis
@@ -52,11 +58,6 @@ conda config --add channels conda-forge
 
 The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file. Due to this reason, for instructional purposes, it is ideal to use a smaller genome.
 
-### 1.1. Creating main directory to save the analysis progress
-
-```
-mkdir ngs_analysis && cd ngs_analysis
-```
 
 ### 1.2. Information of data we will be using in this tutorial.
 
