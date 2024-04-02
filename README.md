@@ -216,46 +216,66 @@ However, if you want to learn the steps to find a reference genome assembly and 
     ```
     wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
     ```
-
 </aside>
 </details>
 
 
-
-![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/9dc3b1da-8a9a-4856-9fc4-63ec7ea34c7f)
-
 <details>
-<summary><b>Method 3: Using `datasets` module.</b></summary>
-
+<summary><b>Method 3: Downloading reference genome from NCBI genomes.</b></summary>
 <aside>
 
-1. Installing datasets conda package
+1. Go to [NCBI genome collection](https://ncbi.nlm.nih.gov/datasets/genome/)
+2. Select/search `Mycobacterium tuberculosis`
+3. Select the reference genome assembly
+4. Now you have three ways of downloading reference genome data.
+
+   ![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/9dc3b1da-8a9a-4856-9fc4-63ec7ea34c7f)
+
+    <details>
+        <summary><b> Using Download</b></summary>
+   <aside>
+       
+   1. Click on download button
+   2. Select `Genome sequences (FASTA)`
+   </aside>
+   </details>    
+
+
+    <details>
+        <summary><b> Downloading using dataset command </b></summary>
+   <aside>
+       
+    1. Installing datasets conda package
     ```
     conda install -c conda-forge ncbi-datasets-cli
     ```
-2. Using `datasets` function
+    Now `datasets` function is ready to execute commands.
+   
+    2. Click on `datasets`
+    3. Copy the command 
     ```
     datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report
     ```
-    
-</aside>
+    4. Paste it in command line to download refernce genome and some additonal files.
+   </aside>
+   </details>   
+
+
+   <details>
+       <summary><b>Using curl command</b></summary>
+   <aside>
+       
+   1. click on `curl`
+   2. Copy the command
+   3. Download the dataset with `curl` command.
+   ```
+   curl https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000195955.2/download?include_annotation_type=GENOME_FASTA&include_annotation_type=GENOME_GFF&include_annotation_type=RNA_FASTA&include_annotation_type=CDS_FASTA&include_annotation_type=PROT_FASTA&include_annotation_type=SEQUENCE_REPORT&hydrated=FULLY_HYDRATED
+   ```
+       
+   </aside>
+   </details>
+   
 </details>
-
-
-* Simply as zip folder
-* Using datasets command\
-    * Downloading dataset tool
-      ```
-      conda install -c conda-forge ncbi-datasets-cli #Installing conda package
-      Download datasets: curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets'
-      Download dataformat: curl -o dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/dataformat'
-      Make them executable: chmod +x datasets dataformat
-      ```
-    * 
-
-```
-
-```
 
 ### 4.2. Indexing reference genome: one-time step
 
