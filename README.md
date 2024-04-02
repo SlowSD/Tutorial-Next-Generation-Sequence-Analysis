@@ -179,16 +179,16 @@ trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz>
 ### 4.1. Downloading reference genome
 The information on *Mycobacterium tuberculosis* reference genome is [here](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000195955.2/).
 
-If you simply want to download the reference genome and move to next step for the analysis, use this code.
+**If you simply want to download the reference genome and would liek to move on to the next step of the analysis, use this code.**
 
 ```
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
 ```
 
-However, if you want to learn the steps to find a reference genome assembly and download it, here below are two methods.
+However, if you want to learn the steps to find a reference genome assembly and download it, here below are the three methods.
 
 <details>
-    <summary><b>Method1: With no use of command</b></summary>
+    <summary><b>Method 1: With no use of command</b></summary>
 <aside>
 
 1. Go to NCBI homepage
@@ -279,42 +279,67 @@ However, if you want to learn the steps to find a reference genome assembly and 
 
 ### 4.2. Indexing reference genome: one-time step
 
-This is a one-time step and can be performed using any of these methods.
+This is a one-time step and can be performed using any of these tools.
 
-#### 4.2.1. Using #samtools
+<details>
+    <summary><h4>Using samtools</h4></summary>
+<aside>
+    
+    ```
+    samtools faidx <ref_genome>
+    ```
+    
+</aside>    
+</details>
 
-```
-samtools faidx <ref_genome>
-```
-
-#### 4.2.2. Using #bwa : Works better with short (~100bp) reads.
-
-```
-bwa index <ref_genome>
-```
-
-> This command generates
+<details>
+    <summary><h4>Using bwa</h4></summary>
+<aside>
+    
+    ```
+    bwa index <ref_genome>
+    ```
+    
+> This command generates:
+>
 > .amb
+> 
 > .ann
+> 
 > .bwt: Binary file
+> 
 > .pac: Binary file
+> 
 > .sa: Binary file
+    
+</aside>    
+</details>
 
-
-#### 4.2.3. Using #bowtie2
-
-```
-bowtie2-build <ref_genome> <prefix>
-```
+<details>
+    <summary><h4>Using bowtie2</h4></summary>
+<aside>
+    ```
+    bowtie2-build <ref_genome> <prefix>
+    ```
 
 > This commands generates 6 files
 > 
 > <prefix>.1.bt2
+> 
 > <prefix>.2.bt2
+> 
 > <prefix>.3.bt2
+> 
 > <prefix>.4.bt2
+> 
 > <prefix>.rev.1.bt2
+> 
 > <prefix>.rev.2.bt2
+  
+</aside>    
+</details>
+
+
 
 ### 4.3. Performing alignment generating SAM file
 
