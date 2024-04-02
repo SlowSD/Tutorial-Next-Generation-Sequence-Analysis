@@ -242,20 +242,20 @@ However, if you want to learn the steps to find a reference genome assembly and 
 
 
     <details>
-        <summary><b> Downloading using dataset command </b></summary>
+        <summary><b> Using dataset command </b></summary>
    <aside>
        
     1. Installing datasets conda package
-    ```
-    conda install -c conda-forge ncbi-datasets-cli
-    ```
+        ```
+        conda install -c conda-forge ncbi-datasets-cli
+        ```
     Now `datasets` function is ready to execute commands.
    
     2. Click on `datasets`
     3. Copy the command 
-    ```
-    datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report
-    ```
+        ```
+        datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report
+        ```
     4. Paste it in command line to download refernce genome and some additonal files.
    </aside>
    </details>   
@@ -268,9 +268,9 @@ However, if you want to learn the steps to find a reference genome assembly and 
    1. click on `curl`
    2. Copy the command
    3. Download the dataset with `curl` command.
-   ```
-   curl https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000195955.2/download?include_annotation_type=GENOME_FASTA&include_annotation_type=GENOME_GFF&include_annotation_type=RNA_FASTA&include_annotation_type=CDS_FASTA&include_annotation_type=PROT_FASTA&include_annotation_type=SEQUENCE_REPORT&hydrated=FULLY_HYDRATED
-   ```
+       ```
+       curl https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000195955.2/download?include_annotation_type=GENOME_FASTA&include_annotation_type=GENOME_GFF&include_annotation_type=RNA_FASTA&include_annotation_type=CDS_FASTA&include_annotation_type=PROT_FASTA&include_annotation_type=SEQUENCE_REPORT&hydrated=FULLY_HYDRATED
+       ```
        
    </aside>
    </details>
