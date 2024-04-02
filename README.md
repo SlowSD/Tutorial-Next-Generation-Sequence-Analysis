@@ -109,6 +109,11 @@ zcat SRR28409626_1.fastq.gz | grep @SRR | wc -l
 Check yourself whether the other file have the same no. of reads.
 
 ### 2.3. fastqc
+
+During the sequecning process due to many possible reasons, the sequence process could be prone to errors. This would lead to 
+
+As the sequencing process is a time consuming process, 
+
 ```
 mkdir fastqc_results
 fastqc SRR28409626_1.fastq.gz SRR28409626_2.fastq.gz -o /fastqc_results
