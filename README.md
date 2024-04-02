@@ -279,7 +279,7 @@ However, if you want to learn the steps to find a reference genome assembly and 
 
 ### 4.2. Indexing reference genome: one-time step
 
-This is a one-time step and can be performed using any of these methods
+This is a one-time step and can be performed using any of these methods.
 
 #### 4.2.1. Using #samtools
 
