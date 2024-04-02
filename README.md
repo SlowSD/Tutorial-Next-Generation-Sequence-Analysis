@@ -1,6 +1,6 @@
 # Tutorial: Next Generation Sequence Analysis - Stepwise
 
-This repository attempts to provide a easy tutorial on the Next Generation Sequence (NGS) analysis.
+This repository attempts to provide a beginner level tutorial on the Next Generation Sequence (NGS) analysis.
 What happens in a NGS analysis?
 
 A next generation sequencing (NGS) involves the sequencing of genome of a species. The principal goal of NGS analysis is often to look and characterize the nucleotide variations or mutations in the sequenced genome.
@@ -26,29 +26,27 @@ could provide many insights such as
 ### 0.2. **Sequencing data to analyze.**
     
 >💡 To perform NGS analysis, we need sequencing reads as inputs. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
-    
-### 0.3. **Modules required to perform analysis.**
 
-#### 0.3.1. Creating a conda environment for this whole NGS analysis session and activating it.
-
-#### 0.3.. Creating main directory to save the analysis progress
-
+### 0.3. Creating a directory to save the analysis progress
 ```
 mkdir ngs_analysis && cd ngs_analysis
 ```
 
+### 0.4. **Modules required to perform analysis.**
+
+#### 0.4.1. Creating a conda environment for this whole NGS analysis session and activating it.
 ```
 conda create --name NGS_analysis
 conda activate NGS_analysis
 ```
     
-#### 0.3.2. Add channels
+#### 0.4.2. Add channels
 ```
 conda config --add channels bioconda
 conda config --add channels conda-forge
 ```
 
-#### 0.3.3. Installing required tools
+#### 0.4.3. Installing required tools
 ```
  conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
  ```
