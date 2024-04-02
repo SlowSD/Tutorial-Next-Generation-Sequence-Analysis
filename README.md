@@ -22,38 +22,31 @@ could provide many insights such as
 
 ### 0.1. **Linux architecture and knowledge of bash commands.**
     
-    <aside>
-    💡 If don’t have any prior experience with bash commands, I would suggest you to check out this article.
-    
-    [Basic Linux commands](https://www.notion.so/Basic-Linux-commands-680d073407834ad981dab47f9411eb08?pvs=21)
-    
-    </aside>
+>💡 If don’t have any prior experience with bash commands, I would suggest you to check out this article.
+>        [Basic Linux commands](https://www.notion.so/Basic-Linux-commands-680d073407834ad981dab47f9411eb08?pvs=21)
     
 ### 0.2. **Sequencing data to analyze.**
     
-    To perform NGS analysis, we need sequencing reads to input. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
+To perform NGS analysis, we need sequencing reads as inputs. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
     
 ### 0.3. **Modules required to perform analysis.**
 
-       0.3.1. creating a conda environment and activating it.
-    
+> #### 0.3.1. creating a conda environment and activating it.
        ```
        conda create --name NGS_analysis
        conda activate NGS_analysis
        ```
     
-       0.3.2. Add channel
-    
+> #### 0.3.2. Add channel
        ```
        conda config --add channels bioconda
        conda config --add channels conda-forge
        ```
-    
-       0.3.3. Installing required tools
+
+> #### 0.3.3. Installing required tools
        ```
        conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
-       ```    
-
+       ```
 ---
 
 ## 1. Downloading sequencing data
