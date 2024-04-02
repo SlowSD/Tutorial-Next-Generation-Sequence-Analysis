@@ -61,14 +61,19 @@ The whole genome sequencing process is time taking and involves reading each bas
 
 ### 1.2. Information of data we will be using in this tutorial.
 
-In this tutorial, we will analyze the result of whole genome sequences of Mycobacterium tuberculosis isolates collected in the New York State.
+In this tutorial, we will analyze the result of whole genome sequences of *Mycobacterium tuberculosis* isolates collected in the New York State.
 
-Study ID: SRP338930
-Bioproject ID: PRJNA766641
-Experiment ID: SRX24013992
-Run ID: SRR28409626
-Biosample ID: SAMN40566331
-SRS20809121
+> Study ID: SRP338930
+>
+> Bioproject ID: PRJNA766641
+>
+> Experiment ID: SRX24013992
+>
+> Run ID: SRR28409626
+>
+> Biosample ID: SAMN40566331
+>
+> SRS20809121
 
 #### 1.2.1. Download fastq reads using SRA toolkit
 
@@ -129,11 +134,11 @@ This step could be done by any of these three methods.
 > Is it necessary?
 Removal of low quality reads.
 Reads containing adaptor sequences.
-> 
 
-3.1. Using #Triimmomatic
-> [Important resource](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf))
+<details>
+<summary><h3>Using Trimmomatic</h3></summary>
 
+> [Important resource](http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf)
 ```
 java -jar /trimmomatic-0.39.jar\\
  PE -phred33\\
@@ -141,30 +146,26 @@ java -jar /trimmomatic-0.39.jar\\
  <output_file1_1> <output_file1_2>\\
  ILLUMINACLIP:adapter.fasta TRAILING:3 LEADING:3 MINLEN:36 SLIDINGWINDOW:4:15
 ```
+    
+</details>
 
-3.2. Using #Cutadapt
+<details>
+<summary><h3>Using Cutadapt</h3></summary>
 
-### 3.2.1 To remove 3' adapter
-
-**Single-end reads**
-
-```
-cutadapt -a <adapter_seq> <input.fastq.gz> -o <output.fastq.gz>
-```
-
-**Paired-end reads**
 ```
 cutadapt -a <adapter_seq_forw> -A <adapter_seq_rev> <file1_1.fastq.gz> <file1_2.fastq.gz> <file1_1.trimmed.fastq.gz> <file1_2.trimmed.fastq.gz>
 ```
+</details>
 
-3.3. Using #Trim_Galore
+<details>
+<summary><h3>Using Trim Galore</h3></summary>
 
 ```
-trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz>
+trim_galore --paired --phred33 --gzip <file1_1.fastq.gz> <file1_2.fastq.gz> 
 ```
+</details>
 
 ---
-
 ## 4. Alignment of reads with the reference genome
 
 ### 4.1. Downloading reference genome
