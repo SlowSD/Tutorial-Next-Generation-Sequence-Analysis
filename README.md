@@ -345,6 +345,17 @@ bowtie2-build <ref_genome> <prefix>
 ### 4.3. Performing alignment generating SAM file
 
 <details>
+    <summary><h4>Using samtools</h4> </summary>
+<aside>
+
+```
+samtools 
+```
+</aside>    
+</details>
+
+
+<details>
     <summary><h4>Using bwa</h4></summary>
 <aside>
 
