@@ -26,17 +26,17 @@ could provide many insights such as
     
 ### 0.2. **Sequencing data to analyze.**
     
-To perform NGS analysis, we need sequencing reads as inputs. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
+>💡 To perform NGS analysis, we need sequencing reads as inputs. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
     
 ### 0.3. **Modules required to perform analysis.**
 
-#### 0.3.1. creating a conda environment and activating it.
+#### 0.3.1. creating a conda environment for this whole NGS analysis session and activating it.
 ```
 conda create --name NGS_analysis
 conda activate NGS_analysis
 ```
     
-#### 0.3.2. Add channel
+#### 0.3.2. Add channels
 ```
 conda config --add channels bioconda
 conda config --add channels conda-forge
