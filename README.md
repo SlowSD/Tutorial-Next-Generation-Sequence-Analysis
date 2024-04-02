@@ -279,7 +279,7 @@ However, if you want to learn the steps to find a reference genome assembly and 
 
 ### 4.2. Indexing reference genome: one-time step
 
-This is a one-time step and can be performed using any of these tools.
+**This is a one-time step and can be performed using any of these tools.**
 
 <details>
     <summary><h4>Using samtools</h4></summary>
@@ -344,20 +344,26 @@ bowtie2-build <ref_genome> <prefix>
 
 ### 4.3. Performing alignment generating SAM file
 
-Using #bowtie2
-
-```
-bowtie2 -x <prefix> -1 <file1_1.fq> -2 <file1_2.fq> -S <read1.sam>
-
-```
-
-or
-Using #bwa
+<details>
+    <summary><h4>Using bwa</h4></summary>
+<aside>
 
 ```
 bwa mem <ref_genome> <file1_1.fq> <file1_2.fq> > <read1.sam>
+```
+</aside>
+</details>
+
+<details>
+    <summary><h4>Using bowtie2</h4></summary>
+<aside>
 
 ```
+bowtie2 -x <prefix> -1 <file1_1.fq> -2 <file1_2.fq> -S <read1.sam>
+```
+</aside>
+</details>
+
 
 ### 4.4 Converting SAM into BAM file
 
