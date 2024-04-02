@@ -17,7 +17,6 @@ could provide many insights such as
     - Type
 
 ---
-
 ## 0. Prerequisite for this tutorial
 
 ### 0.1. **Linux architecture and knowledge of bash commands.**
@@ -32,23 +31,23 @@ To perform NGS analysis, we need sequencing reads as inputs. The largest public 
 ### 0.3. **Modules required to perform analysis.**
 
 > #### 0.3.1. creating a conda environment and activating it.
-       ```
-       conda create --name NGS_analysis
-       conda activate NGS_analysis
-       ```
+```
+conda create --name NGS_analysis
+conda activate NGS_analysis
+```
     
 > #### 0.3.2. Add channel
-       ```
-       conda config --add channels bioconda
-       conda config --add channels conda-forge
-       ```
+```
+conda config --add channels bioconda
+conda config --add channels conda-forge
+```
 
 > #### 0.3.3. Installing required tools
-       ```
-       conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
-       ```
----
+```
+ conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
+ ```
 
+---
 ## 1. Downloading sequencing data
 
 The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file. Due to this reason, for instructional purposes, it is ideal to use a smaller genome.
