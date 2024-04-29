@@ -29,7 +29,7 @@ mkdir ngs_analysis && cd ngs_analysis
 
 ### 0.4. **Modules required to perform analysis.**
 
-#### 0.4.1. Creating a conda environment for this whole NGS analysis session and activating it.
+#### 0.4.1. Creating a conda environment for this whole NGS analysis session and activating it. This step generates an environment in which tools required to perform NGS analysis can be downloaded. Therefore, whenever you would be performing NGS analysis you could simply activate the environment and begin analysis.
 ```
 conda create --name NGS_analysis
 conda activate NGS_analysis
