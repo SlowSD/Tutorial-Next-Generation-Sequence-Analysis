@@ -5,11 +5,11 @@ This repository attempts to provide a stepwise tutorial on the Next Generation S
 
 A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an organism sample.
 
-The goal of NGS analysis can be:
-- Gene expression studies. Here, DNWhere mRNA can be sequenced to determine 
+The goal of NGS analyses can be:
+- Determining genes expression (a.k.a single cell RNA sequencing). Here, the complete mRNA pool of a cell is first converted into cDNAs using reverse transcriptase. Then cDNAs are sequenced to determine their counts. (cDNA counts directly correlates with gene expression levels).
 - Identifying nucleotide mutations or variants.
-- Generating a reference genome of a newly identified species.
-- If no reference_genome available.
+- Generating a reference genome of a newly identified species. Upon encountering a novel species, NGS can be utilized to determine the complete genome sequence.
+- In case of diseases, 
     - Identifying genomic regions
     - Developing reference genome
  
