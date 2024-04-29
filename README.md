@@ -5,7 +5,7 @@ This repository attempts to provide a stepwise tutorial on the Next Generation S
 
 A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an organism sample.
 
-The goal of NGS analyses can be:
+#### The goal of NGS analyses can be:
 - Determining genes expression (a.k.a single cell RNA sequencing). Here, the complete mRNA pool of a cell is first converted into cDNAs using reverse transcriptase. Then cDNAs are sequenced to determine their counts. (cDNA counts directly correlates with gene expression levels).
 - Identifying nucleotide mutations or variants.
 - Generating a reference genome of a newly identified species. Upon encountering a novel species, NGS can be utilized to determine the complete genome sequence.
@@ -43,8 +43,8 @@ conda config --add channels conda-forge
 
 #### 0.4.3. Installing required tools
 ```
- conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
- ```
+conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtools sra-tools trim-galore vcftools
+```
 
 ---
 ## 1. Downloading sequencing data
@@ -557,7 +557,7 @@ vcf-sort <file1.vcf> > <file1.sorted.vcf>
 
 *Converting VCF to BED file*
 
-Using #vcf2bed
+Using #vcf2bed**
 
 ```
 vcf2bed < <file1.vcf> > <file1.bed>
