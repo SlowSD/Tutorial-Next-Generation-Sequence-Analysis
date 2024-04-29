@@ -575,3 +575,9 @@ bedtools coverage -a <ref_genome.gff> -b <file.bam> -o <file1_gene-coverage.txt>
 ```
 
 [[Generating an assembly with unmapped reads]]
+
+### Some important concepts
+
+#### Sequencing depth
+
+
