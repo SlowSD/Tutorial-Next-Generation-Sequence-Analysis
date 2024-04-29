@@ -9,7 +9,10 @@ The goal of NGS analyses can be:
 - Determining genes expression (a.k.a single cell RNA sequencing). Here, the complete mRNA pool of a cell is first converted into cDNAs using reverse transcriptase. Then cDNAs are sequenced to determine their counts. (cDNA counts directly correlates with gene expression levels).
 - Identifying nucleotide mutations or variants.
 - Generating a reference genome of a newly identified species. Upon encountering a novel species, NGS can be utilized to determine the complete genome sequence.
-- In case of diseases, 
+- In case of diseases,
+    - After symptoms based characterization, NGS can be utilized to identify the disease causing species or a species subtype.
+    - Genome sequence of causative organism can be harvest from the affected organism samples to .
+        - confirm the causative organism inConfirm the presence of a affecting organism. identified, NGS can be utilized to sequence samples
     - Identifying genomic regions
     - Developing reference genome
  
