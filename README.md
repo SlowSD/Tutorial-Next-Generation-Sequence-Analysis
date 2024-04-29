@@ -1,22 +1,23 @@
 # Tutorial: Next Generation Sequence Analysis - Stepwise
 
 This repository attempts to provide a stepwise tutorial on the Next Generation Sequence (NGS) analysis.
-What happens in a NGS analysis?
 
-A next generation sequencing (NGS) involves the sequencing of genome of a species. 
 
-The principal goal of NGS analysis is often to look and characterize the nucleotide variations or mutations in the sequenced genome.
+A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an organism sample.
 
-Why performing NGS analysis is important?
+The goal of NGS analysis can be:
+- Gene expression studies. Here, DNWhere mRNA can be sequenced to determine 
+- Identifying nucleotide mutations or variants.
+- Generating a reference genome of a newly identified species.
+- If no reference_genome available.
+    - Identifying genomic regions
+    - Developing reference genome
+ 
 
-A NGS analysis 
+- If reference_genome available
+    - Identifying nucleotide mutations or variants.
 
-could provide many insights such as
 
-- List of mutations in the genome.
-- Identifying mutation
-    - Location
-    - Type
 
 ---
 ## 0. Prerequisite for this tutorial
