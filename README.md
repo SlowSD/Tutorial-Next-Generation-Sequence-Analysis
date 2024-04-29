@@ -197,8 +197,11 @@ However, if you want to learn the steps to find a reference genome assembly and 
     <summary><b>Method 2: Best practice</b></summary>
 <aside>
     
-1. Repeat the 1-4 steps of Method 1.
-2. Click on '**FTP directory for RefSeq assembly**'
+1. Go to NCBI homepage
+2. Select assembly from the drop-down menu
+3. Search for `Mycobacterium tuberculosis`
+4. Click on `ASM19595v2` assemblyRepeat the 1-4 steps of Method 1.
+5. Click on '**FTP directory for RefSeq assembly**'
 
     ![image](https://github.com/SlowSD/Tutorial-Next-Generation-Sequence-Analysis/assets/111181145/4982efb3-9fa0-46a9-a923-348c17fbc958)
 4. Right click on `GCF_000195955.2_ASM19595v2_genomic.fna.gz` and copy link.
