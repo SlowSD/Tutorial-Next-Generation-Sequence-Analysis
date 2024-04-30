@@ -20,7 +20,7 @@ A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an
     
 ### 0.2. **Sequencing data to analyze.**
     
->💡 To perform NGS analysis, we need sequencing reads as inputs. The largest public repository that stores the raw sequencing data is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
+>💡 To perform NGS analysis, we need sequencing reads as inputs. We can download the raw sequencing data from The largest public repository that is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
 
 ### 0.3. Creating a directory to save the analysis progress
 ```
@@ -29,7 +29,7 @@ mkdir ngs_analysis && cd ngs_analysis
 
 ### 0.4. **Modules required to perform analysis.**
 
-#### 0.4.1. Creating a conda environment for this whole NGS analysis session and activating it. This step generates an environment in which tools required to perform NGS analysis can be downloaded. Therefore, whenever you would be performing NGS analysis you could simply activate the environment and begin analysis.
+#### 0.4.1. Creating a conda environment for this whole NGS analysis session and activating it. This step generates an environment in which tools required to perform NGS analysis can be downloaded. Therefore, in future whenever you would be performing NGS analysis you will need to simply activate the environment and begin analysis.
 ```
 conda create --name NGS_analysis
 conda activate NGS_analysis
