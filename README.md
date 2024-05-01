@@ -72,19 +72,22 @@ In this tutorial, we will analyze the result of Whole Genome Sequencing (WGS) of
 
 SRA toolkit serves the purpose of simple downloading of sequencing data directly from the SRA server.
 
-**Installing SRA toolkit**
+
 ```
-sudo apt-get sra-toolkit -y
+mkdir fastq_reads && fastq_reads #This command generates a directory named 'fastq_reads' and enters into it
 ```
 
 ```
-mkdir fastq_reads && fastq_reads
-fastq-dump --split-3 --gzip SRR28409626
+fastq-dump --split-3 --gzip SRR28409621
+fastq-dump --split-3 --gzip SRR28409622
+fastq-dump --split-3 --gzip SRR28409623
 ```
 > **--split-3**
 > - single-end reads will end up in a single file.
 > - paired-end reads will produce two files
 > - unpaired reads (if any) will be placed into a third file
+
+⌚This step will download the raw sequencing files and will take some time to complete.
 
 ---
 ## 2. Information on .fastq files
