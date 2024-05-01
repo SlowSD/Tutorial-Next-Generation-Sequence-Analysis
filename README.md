@@ -20,7 +20,7 @@ A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an
     
 ### 0.2. **Sequencing data to analyze.**
     
->💡 To perform NGS analysis, we need sequencing reads as inputs. We can download the raw sequencing data from The largest public repository that is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
+>💡 To perform NGS analysis, we need sequencing reads as inputs. We can download the raw sequencing data from The largest public repository of sequencing data (generated in studies) that is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
 
 ### 0.3. Creating a directory to save the analysis progress
 ```
@@ -49,12 +49,12 @@ conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtoo
 ---
 ## 1. Downloading sequencing data
 
-The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file. Due to this reason, for instructional purposes, it is ideal to use a smaller genome.
+The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file and longer it would take to complete every analysis step. Therefore, for the learning purposes, we will use smaller datasets.
 
 
 ### 1.2. Information of data we will be using in this tutorial.
 
-In this tutorial, we will analyze the result of whole genome sequences of *Mycobacterium tuberculosis* isolates collected in the New York State.
+In this tutorial, we will analyze the result of Whole Genome Sequencing (WGS) of *Mycobacterium tuberculosis* isolates collected in the New York State. The sequencing was carried out by Illumina MiSeq instrument in a paired-ended fashion. 
 
 > Study ID: SRP338930
 >
@@ -69,6 +69,13 @@ In this tutorial, we will analyze the result of whole genome sequences of *Mycob
 > SRS20809121
 
 #### 1.2.1. Download fastq reads using SRA toolkit
+
+SRA toolkit serves the purpose of simple downloading of sequencing data directly from the SRA server.
+
+**Installing SRA toolkit**
+```
+sudo apt-get sra-toolkit -y
+```
 
 ```
 mkdir fastq_reads && fastq_reads
