@@ -134,6 +134,15 @@ fastqc SRR28409626_1.fastq.gz SRR28409626_2.fastq.gz -o /fastqc_results
     > - Overrepresented sequences
     > - Adapter content
 
+### 2.4 multiqc
+
+While `fastqc` generates report for each .fastq files, `multiqc` takes fastqc reports as an input and generates one report.
+
+```
+mkdir multiqc_results
+multiqc *.fastqc -o multiqc_results
+```
+
 ---
 ## 3. Trimming reads
 
