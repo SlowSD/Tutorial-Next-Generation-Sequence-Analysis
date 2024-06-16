@@ -26,7 +26,7 @@ As the name suggests, sequencing is the procedure of determining the order/seque
     
 >💡 To perform NGS analysis, we need sequencing reads as inputs. We can download the raw sequencing data from The largest public repository of sequencing data (generated in studies) that is the [**Sequence Read Archive (SRA)**](https://www.ncbi.nlm.nih.gov/sra).
 
-### 0.3. Creating a directory to save the analysis progress
+### 0.3. Creating a working directory to save the analysis progress
 ```
 mkdir ngs_analysis && cd ngs_analysis
 ```
@@ -53,45 +53,17 @@ conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtoo
 ---
 ## 1. Downloading sequencing data
 
-The whole genome sequencing process is time taking and involves reading each base position. Thus, the larger the species genome the bigger would be the sequenced data file and longer it would take to complete every analysis step. Therefore, for the learning purposes, we will use smaller datasets.
-
+As sequence analysis is a multi-step procedure, we will be using a smaller dataset for learning purposes.
 
 ### 1.2. Information of data we will be using in this tutorial.
 
-In this tutorial, we will analyze the result of Whole Genome Sequencing (WGS) of *Mycobacterium tuberculosis* isolates collected in the New York State. The sequencing was carried out by Illumina MiSeq instrument in a paired-ended fashion. 
-
-> Study ID: SRP338930
->
-> Bioproject ID: PRJNA766641
->
-> Experiment ID: SRX24013992
->
-> Run ID: SRR28409626
->
-> Biosample ID: SAMN40566331
->
-> SRS20809121
-
-#### 1.2.1. Download fastq reads using SRA toolkit
-
-SRA toolkit serves the purpose of simple downloading of sequencing data directly from the SRA server.
-
-
 ```
-mkdir fastq_reads && fastq_reads #This command generates a directory named 'fastq_reads' and enters into it
+https://zenodo.org/records/11791175/files/SRR396636.sra_1.fastq
+https://zenodo.org/records/11791175/files/SRR396636.sra_2.fastq
+https://zenodo.org/records/11791175/files/SRR396637.sra_1.fastq
+https://zenodo.org/records/11791175/files/SRR396637.sra_2.fastq
 ```
 
-```
-fastq-dump --split-3 --gzip SRR28409621
-fastq-dump --split-3 --gzip SRR28409622
-fastq-dump --split-3 --gzip SRR28409623
-```
-> **--split-3**
-> - single-end reads will end up in a single file.
-> - paired-end reads will produce two files
-> - unpaired reads (if any) will be placed into a third file
-
-⌚This step will download the raw sequencing files and will take some time to complete.
 
 ---
 ## 2. Information on .fastq files
