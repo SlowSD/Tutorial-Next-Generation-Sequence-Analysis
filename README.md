@@ -53,10 +53,9 @@ conda install -c bioconda bcftools bedtools blast bwa fastqc igv igvtools samtoo
 ---
 ## 1. Downloading sequencing data
 
-As sequence analysis is a multi-step procedure, we will be using a smaller dataset for learning purposes.
+As sequence analysis is a multi-step procedure, we will be using a smaller dataset for learning purposes. I am using example data featured by [Qiagen](https://digitalinsights.qiagen.com/downloads/example-data/).
 
-### 1.2. Information of data we will be using in this tutorial.
-
+To download this dataset, copy and paste each links in the url.
 ```
 https://zenodo.org/records/11791175/files/SRR396636.sra_1.fastq
 https://zenodo.org/records/11791175/files/SRR396636.sra_2.fastq
