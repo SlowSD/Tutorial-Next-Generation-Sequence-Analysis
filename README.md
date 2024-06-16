@@ -1,9 +1,13 @@
 # Tutorial: Next Generation Sequence Analysis - Stepwise
 
-This repository attempts to provide a stepwise tutorial on the Next Generation Sequence (NGS) analysis.
+**This repository attempts to provide a stepwise tutorial on the Next Generation Sequence (NGS) analysis.**
 
+As the name suggests, sequencing is the procedure of determining the order/sequence of things such as people, processes, words, etc. In biological contexts, sequencing refers to determining the order of nucleotides (A, T, G, C) from DNA sample. The term next generation sequencing (NGS) refers to an advanced method/technology of determining nucleotide order.
 
-A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an organism sample.
+> **What about sequencing of nucleotides from RNA sample?**
+> 
+> While dealing with RNA samples, for most biological interpretations RNA is converted into an intermediate form known as cDNA (complementary DNA). However, methods namely direct RNA sequencing (DRS) involves sequencing of RNA directly.
+
 
 #### The goal of NGS analyses can be:
 - Determining genes expression (a.k.a single cell RNA sequencing). Here, the complete mRNA pool of a cell is first converted into cDNAs using reverse transcriptase. Then cDNAs are sequenced to determine their counts. (cDNA counts directly correlates with gene expression levels).
@@ -16,7 +20,7 @@ A next generation sequencing (NGS) involves the sequencing of DNA or RNA from an
 
 ### 0.1. **Linux architecture and knowledge of bash commands.**
     
->💡 If don’t have any prior experience with bash commands, I would suggest you to check out this article on [Basic Linux commands](https://www.notion.so/Basic-Linux-commands-680d073407834ad981dab47f9411eb08?pvs=21)
+>💡 If don’t have any prior experience with unix commands, I would suggest you to check out this article on [Basic Linux commands](https://www.notion.so/Basic-Linux-commands-680d073407834ad981dab47f9411eb08?pvs=21)
     
 ### 0.2. **Sequencing data to analyze.**
     
